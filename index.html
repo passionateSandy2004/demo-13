@@ -669,7 +669,7 @@
         const questions = [
             {
                 question: "How long have you had Diabetes?",
-                options: ["More than 5 years", "1 to 5 years", "Less than 1 year"]
+                options: [ "Less than 1 year","1 to 5 years","More than 5 years"]
             },
             {
                 question: "Update your current sugar level?",
@@ -681,7 +681,7 @@
             },
             {
                 question: "What is your Lifestyle Status?",
-                options: ["Sedentary", "Moderate", "Active"]
+                options: [ "Active (You spend most of your day doing something physical)", "Moderate (You spend a large part of your day on your feet)","Sedentary ( You spend most of your day sitting)"]
             },
             {
                 question: "Choose your Food Preference for your Diet",
@@ -743,7 +743,8 @@
                 indicator.textContent = "You're almost there!";
             } else {
                 const remainingQuestions = questions.length - currentQuestion - 1;
-                indicator.textContent = `${remainingQuestions} question${remainingQuestions !== 1 ? 's' : ''} remaining`;
+                indicator.textContent = `Get your Diet plan in ${remainingQuestions} step${remainingQuestions !== 1 ? 's' : ''}`;
+                //Get your Diet plan in 6 steps - 5 steps and descending order
             }
         }
     
